@@ -46,7 +46,7 @@ export class ClientService {
     }
 
     updateClient(id:any, client:Client): Observable<Client> {
-        return this.http.put<Client>(this.endpoint + '/clients/', JSON.stringify(client), this.httpOptions)
+        return this.http.put<Client>(this.endpoint + '/clients', JSON.stringify(client), this.httpOptions)
             .pipe(
                 catchError(this.handleError)
             )
