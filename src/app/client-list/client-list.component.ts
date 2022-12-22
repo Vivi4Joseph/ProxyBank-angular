@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../services/account.service';
 import { ClientService } from '../services/client.service';
 
 @Component({
@@ -9,10 +10,14 @@ import { ClientService } from '../services/client.service';
 export class ClientListComponent implements OnInit {
 
   client: any = [];
+  account: any = [];
 
   constructor(
-    public service: ClientService
-  ) { }
+    public service: ClientService,
+    public services: AccountService
+  ) { 
+    
+  }
 
   ngOnInit() {
     this.loadClients()
@@ -24,6 +29,11 @@ export class ClientListComponent implements OnInit {
       this.client = data;
     })
   }
+  // loadAccount(){
+  //   return this.services.getAccount().subscribe((data: {}) => {console.log(data);
+  //     this.account = data;
+  //   })
+  // }
 
   deleteClient(id:number) {
     if (window.confirm('Are you sure, you want to delete?')){

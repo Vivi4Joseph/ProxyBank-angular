@@ -4,17 +4,17 @@
             <h3 class="mb-3 text-center">Update Client</h3>
 
             <div class="form-group">
-                <input type="text" [(ngModel)]="clientDetails.nom" name="nom" [value]="clientDetails.nom" class="form-control" placeholder="Nom">
+                <input type="text"  ng-required="expression" [(ngModel)]="clientDetails.lastName" name="nom" [value]="clientDetails.nom" class="form-control" placeholder="Nom" required>
 
 
 
-                <input type="text" [(ngModel)]="clientDetails.prenom" name="prenom" [value]="clientDetails.prenom" class="form-control" placeholder="Prenom">
+                <input type="text"  ng-required="expression" [(ngModel)]="clientDetails.firstName" name="prenom" [value]="clientDetails.prenom" class="form-control" placeholder="Prenom" required>
 
 
 
-                <input type="text" [(ngModel)]="clientDetails.login" name="login" [value]="clientDetails.login" class="form-control" placeholder="Login">
+                <input type="text"  ng-required="expression" [(ngModel)]="clientDetails.login" name="login" [value]="clientDetails.login" class="form-control" placeholder="Login" required>
 
-  
+<!--   
                     <input type="text" [(ngModel)]="clientDetails.adresse.numero" name="numero" [value]="clientDetails.adresse.numero" class="form-control"
                         placeholder="numero">
 
@@ -23,7 +23,7 @@
 
 
                     <input type="text" [(ngModel)]="clientDetails.adresse.ville" name="ville" [value]="clientDetails.adresse.ville" class="form-control"
-                        placeholder="ville">
+                        placeholder="ville"> -->
 
   
 

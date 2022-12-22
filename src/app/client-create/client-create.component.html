@@ -4,17 +4,17 @@
             <h3 class="mb-3 text-center">Create Client</h3>
 
             <div class="form-group">
-                <input type="text" [(ngModel)]="clientDetails.lastName" name="nom"  class="form-control" placeholder="Nom">
+                <input type="text" [(ngModel)]="clientDetails.lastName" name="nom"  class="form-control" placeholder="LastName" required>
 
 
 
-                <input type="text" [(ngModel)]="clientDetails.firstName" name="prenom"  class="form-control" placeholder="Prenom">
+                <input type="text" [(ngModel)]="clientDetails.firstName" name="prenom"  class="form-control" placeholder="FirstName" required>
 
 
 
-                <input type="text" [(ngModel)]="clientDetails.login" name="login"  class="form-control" placeholder="Login">
+                <input type="text" [(ngModel)]="clientDetails.login" name="login"  class="form-control" placeholder="Login" required>
 
-  
+<!--   
                     <input type="text" [(ngModel)]="clientDetails.adresse.numero" name="numero"  class="form-control"
                         placeholder="numero">
 
@@ -23,12 +23,13 @@
 
 
                     <input type="text" [(ngModel)]="clientDetails.adresse.ville" name="ville"  class="form-control"
-                        placeholder="ville">
+                        placeholder="ville"> -->
 
   
 
 
-                <button class="btn btn-success btn-lg btn-block" (click)="addClient()">Update Client</button>
+                <button class="btn btn-success btn-lg btn-block" (click)="addClient()">Create Client</button>
+                
             </div>
         </form>
     </div>

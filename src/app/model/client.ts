@@ -5,7 +5,7 @@ export class Client {
   firstName: string='';
   login: string='';
   motDePasse: string='';
-  adresse: Adresse={numero:'', rue:'', ville:''};
+  // adresse: Adresse={numero:'', rue:'', ville:''};
 
 
 }

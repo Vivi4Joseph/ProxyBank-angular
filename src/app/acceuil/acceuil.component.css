@@ -1,0 +1,13 @@
+.container {
+   height: 500px;
+}
+.vertical-center {
+    text-align: center;
+    margin-top: 200px;
+    
+}
+
+a{
+    margin: 13px;
+    width: 200px;
+}

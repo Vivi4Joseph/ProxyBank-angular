@@ -11,6 +11,10 @@ import { ClientCreateComponent } from './client-create/client-create.component';
 import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import { ClientShowComponent } from './client-show/client-show.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AccountCreateComponent } from './account-create/account-create.component';
+import { AccountShowComponent } from './account-show/account-show.component';
+import { AccountSavingShowComponent } from './account-saving-show/account-saving-show.component';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { ClientShowComponent } from './client-show/client-show.component';
     ClientCreateComponent,
     ClientEditComponent,
     ClientListComponent,
-    ClientShowComponent
+    ClientShowComponent,
+    AcceuilComponent,
+    AccountCreateComponent,
+    AccountShowComponent,
+    AccountSavingShowComponent
 
 ],
   imports: [

@@ -9,7 +9,7 @@ import { Account } from '../model/account';
     providedIn: 'root'
 })
 
-export class ClientService {
+export class AccountService {
 
      //endpoint = 'http://localhost:3000';
     endpoint = 'http://localhost:8080';
@@ -23,43 +23,29 @@ export class ClientService {
         })
     }
 
-
-
-    getClients(): Observable<Client[]> {
-        return this.http.get<Client[]>(this.endpoint + '/clients', this.httpOptions)
+    getAccounts(): Observable<Account[]> {
+        return this.http.get<Account[]>(this.endpoint + '/accounts/current', this.httpOptions)
             .pipe(
                 catchError(this.handleError)
             )
     }
 
-    getClient(id:any): Observable<Client> {
-        return this.http.get<Client>(this.endpoint + '/clients/' + id)
+    getAccount(id:any): Observable<Account[]> {
+        return this.http.get<Account[]>(this.endpoint + '/accounts/current/client/' + id)
             .pipe(
                 catchError(this.handleError)
             )
-    }
+            }
+            
+    getAccountc(id:any): Observable<Account[]> {
+                return this.http.get<Account[]>(this.endpoint + '/accounts/saving/client/' + id)
+                    .pipe(
+                        catchError(this.handleError)
+                    )
+                    }
 
-    createClient(client:Client): Observable<Client> {
-        return this.http.post<Client>(this.endpoint + '/clients', JSON.stringify(client), this.httpOptions)
-            .pipe(
-                catchError(this.handleError)
-            )
-    }
-
-    updateClient(id:any, client:Client): Observable<Client> {
-        return this.http.put<Client>(this.endpoint + '/clients', JSON.stringify(client), this.httpOptions)
-            .pipe(
-                catchError(this.handleError)
-            )
-    }
-
-    deleteClient(id:any) {
-        return this.http.delete<Client>(this.endpoint + '/clients/' + id, this.httpOptions)
-            .pipe(
-                catchError(this.handleError)
-            )
-    }
-
+   
+    
     handleError(error:any) {
         let errorMessage = '';
         if (error.error instanceof ErrorEvent) {
