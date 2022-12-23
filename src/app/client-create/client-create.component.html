@@ -28,7 +28,7 @@
   
 
 
-                <button class="btn btn-success btn-lg btn-block" (click)="addClient()">Create Client</button>
+                <button class="btn btn-success btn-lg btn-block" (click)="addClient()" [disabled]="!mainForm.form.valid">Create Client</button>
                 
             </div>
         </form>

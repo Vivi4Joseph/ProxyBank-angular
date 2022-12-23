@@ -28,7 +28,7 @@
   
 
 
-                <button class="btn btn-success btn-lg btn-block" (click)="updateClient()">Update Client</button>
+                <button class="btn btn-success btn-lg btn-block" (click)="updateClient()" [disabled]="!mainForm.form.valid">Update Client</button>
             </div>
         </form>
     </div>
